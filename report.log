@@ -1,0 +1,275 @@
+[19/Aug/2013 12:56:45] ERROR [django.request:212] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 57, in process_request
+    host = request.get_host()
+  File "C:\Python27\lib\site-packages\django\http\request.py", line 72, in get_host
+    "Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): %s" % host)
+SuspiciousOperation: Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): 127.0.0.1:8000
+[19/Aug/2013 12:56:47] ERROR [django.request:212] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 57, in process_request
+    host = request.get_host()
+  File "C:\Python27\lib\site-packages\django\http\request.py", line 72, in get_host
+    "Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): %s" % host)
+SuspiciousOperation: Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): 127.0.0.1:8000
+[19/Aug/2013 12:57:19] ERROR [django.request:212] Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 57, in process_request
+    host = request.get_host()
+  File "C:\Python27\lib\site-packages\django\http\request.py", line 72, in get_host
+    "Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): %s" % host)
+SuspiciousOperation: Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): 127.0.0.1:8000
+[19/Aug/2013 12:57:21] ERROR [django.request:212] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 57, in process_request
+    host = request.get_host()
+  File "C:\Python27\lib\site-packages\django\http\request.py", line 72, in get_host
+    "Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): %s" % host)
+SuspiciousOperation: Invalid HTTP_HOST header (you may need to set ALLOWED_HOSTS): 127.0.0.1:8000
+[19/Aug/2013 13:27:28] ERROR [django.request:212] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 103, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "C:\Users\icharala\Local\Develop\Devin\noctichain\noctichain\urls.py", line 20
+    url(r'^config/(?P<uuid>[a-f\d]+)$', 	 		'view_display' 		name="config_display"),
+                                       	 		               		    ^
+SyntaxError: invalid syntax
+[19/Aug/2013 13:27:28] ERROR [django.request:212] Internal Server Error: /favicon.ico
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 92, in get_response
+    response = middleware_method(request)
+  File "C:\Python27\lib\site-packages\django\middleware\common.py", line 69, in process_request
+    if (not urlresolvers.is_valid_path(request.path_info, urlconf) and
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 551, in is_valid_path
+    resolve(path, urlconf)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 440, in resolve
+    return get_resolver(urlconf).resolve(path)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 319, in resolve
+    for pattern in self.url_patterns:
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 347, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 342, in urlconf_module
+    self._urlconf_module = import_module(self.urlconf_name)
+  File "C:\Python27\lib\site-packages\django\utils\importlib.py", line 35, in import_module
+    __import__(name)
+  File "C:\Users\icharala\Local\Develop\Devin\noctichain\noctichain\urls.py", line 20
+    url(r'^config/(?P<uuid>[a-f\d]+)$', 	 		'view_display' 		name="config_display"),
+                                       	 		               		    ^
+SyntaxError: invalid syntax
+[19/Aug/2013 13:28:03] ERROR [django.request:212] Internal Server Error: /config/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 133, in get_response
+    raise ValueError("The view %s.%s didn't return an HttpResponse object." % (callback.__module__, view_name))
+ValueError: The view noctichain.editor.views.view_list didn't return an HttpResponse object.
+[19/Aug/2013 16:06:37] ERROR [django.request:212] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\icharala\Local\Develop\Devin\noctichain\noctichain\coreviews.py", line 18, in view_index
+    context_instance=RequestContext(request)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 156, in render
+    return self.render_template(self.template, context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 138, in render_template
+    output = template.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 411, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 496, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 382, in _reverse_with_prefix
+    possibilities = self.reverse_dict.getlist(lookup_view)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 29, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import noctichain.editor.views.view_scpt_edit. View does not exist in module noctichain.editor.views.
+[19/Aug/2013 16:06:37] ERROR [django.request:212] Internal Server Error: /home/
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\icharala\Local\Develop\Devin\noctichain\noctichain\coreviews.py", line 18, in view_index
+    context_instance=RequestContext(request)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 177, in render_to_string
+    return t.render(context_instance)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 124, in render
+    return compiled_parent._render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 156, in render
+    return self.render_template(self.template, context)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 138, in render_template
+    output = template.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 140, in render
+    return self._render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 134, in _render
+    return self.nodelist.render(context)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 830, in render
+    bit = self.render_node(node, context)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 74, in render_node
+    return node.render(context)
+  File "C:\Python27\lib\site-packages\django\template\defaulttags.py", line 411, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=context.current_app)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 496, in reverse
+    return iri_to_uri(resolver._reverse_with_prefix(view, prefix, *args, **kwargs))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 382, in _reverse_with_prefix
+    possibilities = self.reverse_dict.getlist(lookup_view)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 297, in reverse_dict
+    self._populate()
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 286, in _populate
+    lookups.appendlist(pattern.callback, (bits, p_pattern, pattern.default_args))
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 230, in callback
+    self._callback = get_callable(self._callback_str)
+  File "C:\Python27\lib\site-packages\django\utils\functional.py", line 29, in wrapper
+    result = func(*args)
+  File "C:\Python27\lib\site-packages\django\core\urlresolvers.py", line 118, in get_callable
+    (lookup_view, mod_name))
+ViewDoesNotExist: Could not import noctichain.editor.views.view_scpt_edit. View does not exist in module noctichain.editor.views.
+[19/Aug/2013 16:21:14] ERROR [django.request:212] Internal Server Error: /scriptlet/12312312312
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\icharala\Local\Develop\Devin\noctichain\noctichain\editor\views.py", line 51, in view_scpt_display
+    context_instance=RequestContext(request)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 281, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 65, in unclosed_block_tag
+    raise self.source_error(source, msg)
+TemplateSyntaxError: Unclosed tag 'block'. Looking for one of: endblock 
+[19/Aug/2013 16:21:15] ERROR [django.request:212] Internal Server Error: /scriptlet/12312312312
+Traceback (most recent call last):
+  File "C:\Python27\lib\site-packages\django\core\handlers\base.py", line 115, in get_response
+    response = callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\icharala\Local\Develop\Devin\noctichain\noctichain\editor\views.py", line 51, in view_scpt_display
+    context_instance=RequestContext(request)
+  File "C:\Python27\lib\site-packages\django\shortcuts\__init__.py", line 29, in render_to_response
+    return HttpResponse(loader.render_to_string(*args, **kwargs), **httpresponse_kwargs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 170, in render_to_string
+    t = get_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 146, in get_template
+    template, origin = find_template(template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 135, in find_template
+    source, display_name = loader(name, dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 43, in __call__
+    return self.load_template(template_name, template_dirs)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 49, in load_template
+    template = get_template_from_string(source, origin, template_name)
+  File "C:\Python27\lib\site-packages\django\template\loader.py", line 157, in get_template_from_string
+    return Template(source, origin, name)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 125, in __init__
+    self.nodelist = compile_string(template_string, origin)
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 153, in compile_string
+    return parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 215, in do_extends
+    nodelist = parser.parse()
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 274, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Python27\lib\site-packages\django\template\loader_tags.py", line 190, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Python27\lib\site-packages\django\template\base.py", line 281, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Python27\lib\site-packages\django\template\debug.py", line 65, in unclosed_block_tag
+    raise self.source_error(source, msg)
+TemplateSyntaxError: Unclosed tag 'block'. Looking for one of: endblock 

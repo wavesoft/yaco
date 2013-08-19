@@ -1,0 +1,11 @@
+{% extends "body.html" %}
+{% block body %}
+		<div class="container">
+			{% include "navbar.html" %}
+			{% block body_header %}{% endblock %}
+		</div>
+		{% block body_main %}{% endblock %}
+		<div class="container">
+			{% block body_footer %}{% endblock %}
+		</div>
+{% endblock %}

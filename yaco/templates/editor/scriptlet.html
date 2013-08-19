@@ -1,0 +1,169 @@
+{% extends "basic.html" %}
+{% block title %}Context{% endblock %}
+{% block head %}
+	{{ block.super }}
+	<script src="/static/js/codemirror.js"></script>
+	<link rel="stylesheet" href="/static/css/codemirror.css">
+	<script src="/static/js/mode/shell/shell.js"></script>
+	<script src="/static/js/mode/python/python.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		var config = { mode: 'shell' };
+		function bindEditor( name ) {
+			// Create CodeMirrot
+			var cm = CodeMirror.fromTextArea(document.getElementById(name), config);
+			// Bind script list callback
+			$("#" + name + "-lang").change(function(a) {
+				alert(a.target.value);
+			});
+		}
+		bindEditor('code-init'); bindEditor('code-adapt'); bindEditor('code-start');
+		bindEditor('code-stop'); bindEditor('code-heartbeat');
+	});
+	</script>
+{% endblock %}
+{% block body_main %}
+	<div class="container" id="scriptlet-body">
+		<div class="page-header">
+		  <h1>Edit Scriptlet <small>{{name}}</small></h1>
+		</div>
+
+		<h2 class="text-info">Initialization</h2>
+		<div class="row-fluid">
+		  <div class="span8">
+		  	<textarea id="code-init">#!/bin/bash
+# Initialization goes here
+</textarea>
+		  </div>
+		  <div class="span4">
+		  	<div class="well well-small text-small">
+		  		<h4>Description</h4>
+		  		<p>This script will be executed the first time the <em>scriptlet</em> is started. It is responsible of setting up the environment and the first-use components.</p>
+		  		<p>This script should return with exit code <strong>0</strong> if everything was successful. Othewise the <em>scriptlet</em> will be considered invalid and no further actions will be taken.</p>
+		  	</div>
+		  	<div class="control-group">
+				<label class="control-label" for="code-init-lang">Language</label>
+				<div class="controls">
+			    	<select id="code-init-lang">
+			  			<option value="shell">Shell Script</option>
+			  			<option value="python">Python</option>
+			  			<option value="perl">Perl</option>
+		  			</select>
+			  	</div>
+			</div>
+		  </div>
+		</div>
+
+		<h2 class="text-info">Adapt</h2>
+		<div class="row-fluid">
+		  <div class="span8">
+		  	<textarea id="code-adapt">#!/bin/bash
+# Adaptation script goes here
+</textarea>
+		  </div>
+		  <div class="span4">
+		  	<div class="well well-small text-small">
+		  		<h4>Description</h4>
+		  		<p>This script will be executed when the <em>cluster</em> environment have are changed. This means when a linked <em>scriptlet</em> has modified the environment variables or a <em>scriptlet</em> changed state.</p>
+		  		<p>This script should return with exit code <strong>0</strong> if everyting was successful. Otherwise the <em>scriptlet</em> will switch to <em>invalid</em> state and will be terminated.</p>
+		  	</div>
+		  	<div class="control-group">
+				<label class="control-label" for="code-init-lang">Language</label>
+				<div class="controls">
+			    	<select id="code-adapt-lang">
+			  			<option value="shell">Shell Script</option>
+			  			<option value="python">Python</option>
+			  			<option value="perl">Perl</option>
+		  			</select>
+			  	</div>
+			</div>
+		  </div>
+		</div>
+
+		<h2 class="text-info">Start</h2>
+		<div class="row-fluid">
+		  <div class="span8">
+		  	<textarea id="code-start">#!/bin/bash
+# Start your componets here
+</textarea>
+		  </div>
+		  <div class="span4">
+		  	<div class="well well-small text-small">
+		  		<h4>Description</h4>
+		  		<p>This script will be executed when the <em>scriptlet</em> should be started.</p>
+		  		<p>This script should return with exit code <strong>0</strong> if everyting was successful. Otherwise the <em>scriptlet</em> will switch to <em>invalid</em> state and will be terminated.</p>
+		  	</div>
+		  	<div class="control-group">
+				<label class="control-label" for="code-init-lang">Language</label>
+				<div class="controls">
+			    	<select id="code-start-lang">
+			  			<option value="shell">Shell Script</option>
+			  			<option value="python">Python</option>
+			  			<option value="perl">Perl</option>
+		  			</select>
+			  	</div>
+			</div>
+
+		  </div>
+		</div>
+
+		<h2 class="text-info">Stop</h2>
+		<div class="row-fluid">
+		  <div class="span8">
+		  	<textarea id="code-stop">#!/bin/bash
+# Stop your componets here
+</textarea>
+		  </div>
+		  <div class="span4">
+		  	<div class="well well-small text-small">
+		  		<h4>Description</h4>
+		  		<p>This script will be executed when the <em>scriptlet</em> should be stopped.</p>
+		  		<p>You can block your code, waiting for the application(s) to stop grafeully, but you must always check for timeout and enforce a termination! When this script finishes, the environment should be clean from this scriptlet.</p>
+		  		<p>This script should return with exit code <strong>0</strong> if everyting was successful. Otherwise the <em>scriptlet</em> will switch to <em>invalid</em> state and will be terminated.</p>
+		  	</div>
+		  	<div class="control-group">
+				<label class="control-label" for="code-init-lang">Language</label>
+				<div class="controls">
+			    	<select id="code-stop-lang">
+			  			<option value="shell">Shell Script</option>
+			  			<option value="python">Python</option>
+			  			<option value="perl">Perl</option>
+		  			</select>
+			  	</div>
+			</div>
+
+		  </div>
+		</div>
+
+		<h2 class="text-info">Heartbeat</h2>
+		<div class="row-fluid">
+		  <div class="span8">
+		  	<textarea id="code-heartbeat">#!/bin/bash
+# Stop your componets here
+</textarea>
+		  </div>
+		  <div class="span4">
+		  	<div class="well well-small text-small">
+		  		<h4>Description</h4>
+		  		<p>This script will be executed periodically in a fixed interval to check the <em>scriptlet</em>'s status.</p>
+		  		<p>If this script returns <strong>0</strong> it means that the service the <em>scriptlet</em> is controlling is working properly and no serious load is upon it.<p>
+		  		<p>If this script returns <strong>1</strong> it means that it is stressed but not yet in a critical state.<p>
+		  		<p>If this script returns <strong>2</strong> it means that it is stressed under heavy load and it's in a critical state.<p>
+		  		<p>If this script returns <strong>3</strong> or higher it means that it has failed and should be restarted/reaped.<p>
+		  	</div>
+		  	<div class="control-group">
+				<label class="control-label" for="code-init-lang">Language</label>
+				<div class="controls">
+			    	<select id="code-heartbeat-lang">
+			  			<option value="shell">Shell Script</option>
+			  			<option value="python">Python</option>
+			  			<option value="perl">Perl</option>
+		  			</select>
+			  	</div>
+			</div>
+
+		  </div>
+		</div>
+
+	</div>
+{% endblock %}
